@@ -16,7 +16,26 @@ var counter = {
 }
 
 function countLetters(counter, sample_text){
-  // FIX ME
+  var sampleSplit = sample_text.toLowerCase().split('');
+
+  for (var i = 0; i < sampleSplit.length; i++){
+    for (var key in counter) {
+      if (sampleSplit[i] === key){
+        counter[key] +=1;
+      }
+    }
+  }
+console.log('counter: ', counter);
+
+
+
+
+  // console.log(sample_text[0] ===  );
+  // if ( < sampleSplit.length){
+  //   return;
+  // }
+
+
 }
 
 $(document).ready(function(){
